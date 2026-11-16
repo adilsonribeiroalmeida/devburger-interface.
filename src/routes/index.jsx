@@ -5,6 +5,8 @@ import { Login } from '../containers/Login';
 import { Register } from '../containers/Register';
 import { Home } from '../containers/Home';
 
+import { Menu } from "../containers/Menu";
+
 export const router = createBrowserRouter([
      {
           path: '/',
@@ -21,5 +23,9 @@ export const router = createBrowserRouter([
      {
           path: '/home',
           element: <Home />,
+     },
+     {
+          path: "/menu",
+          element: <Menu />,
      },
 ]);
