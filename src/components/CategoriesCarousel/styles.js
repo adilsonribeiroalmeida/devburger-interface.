@@ -38,6 +38,18 @@ export const ContainerItems = styled.div`
   height: 125px;
   overflow: hidden;
   border-radius: 8px;
+  cursor: pointer;
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+
+  &:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 6px 16px rgba(0, 0, 0, 0.2);
+  }
+
+  &:focus-visible {
+    outline: 3px solid #9758a6;
+    outline-offset: 3px;
+  }
 
   img {
     width: 100%;
@@ -47,20 +59,23 @@ export const ContainerItems = styled.div`
   }
 
   p {
-    position: absolute;
-    bottom: 10px;
-    left: 12px;
-    width: auto;
-    margin: 0;
-    padding: 5px 8px;
+  position: absolute;
+  top: 50%;
+  left: 15px;
+  transform: translateY(-50%);
 
-    color: #ffffff;
-    font-size: 14px;
-    font-weight: 700;
-    text-align: left;
+  width: max-content;
+  max-width: calc(100% - 30px);
+  margin: 0;
+  padding: 6px 10px;
 
-    background: rgba(0, 0, 0, 0.65);
-    border-radius: 4px;
-    box-sizing: border-box;
-  }
+  color: #ffffff;
+  font-size: 14px;
+  font-weight: 700;
+  text-align: left;
+
+  background: rgba(0, 0, 0, 0.65);
+  border-radius: 4px;
+  box-sizing: border-box;
+}
 `;
